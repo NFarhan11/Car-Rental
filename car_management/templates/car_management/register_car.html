@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+	<h1 class="mb-4">Register a New Car</h1>
+
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="btn btn-success">Register Car</button>
+	</form>
+</div>
+{% endblock %}
